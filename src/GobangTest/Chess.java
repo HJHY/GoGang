@@ -1,99 +1,97 @@
 package GobangTest;
 
-public class Chess implements Comparable<Chess>{
-	//棋子位置
-	private int X;
-	private int Y;
-	//黑白玩家
-	private int Player;
-	//落子顺序
-	private int Order;
-	
-	private int offence;
-	private int defence;
-	private int sum;
-	
-	private StringBuffer buffer;
-	
-	public Chess(int X,int Y,int Player,int Order)
-	{
-		this.X=X;
-		this.Y=Y;
-		this.Player=Player;
-		this.Order=Order;
-		this.buffer=new StringBuffer();
-	}
-	
-	public int getX() {
-		return X;
-	}
-	public void setX(int x) {
-		X = x;
-	}
-	public int getY() {
-		return Y;
-	}
-	public void setY(int y) {
-		Y = y;
-	}
+public class Chess implements Comparable<Chess> {
+    //棋子位置
+    private int X;
+    private int Y;
+    //黑白玩家
+    private int Player;
+    //落子顺序
+    private int Order;
 
-	public int getPlayer() {
-		return Player;
-	}
+	//进攻分
+    private int offence;
+	//防御分
+    private int defence;
+    private int sum;
 
-	public void setPlayer(int player) {
-		Player = player;
-	}
+    private StringBuffer buffer;
 
-	public int getOrder() {
-		return Order;
-	}
+    public Chess(int X, int Y, int Player, int Order) {
+        this.X = X;
+        this.Y = Y;
+        this.Player = Player;
+        this.Order = Order;
+        this.buffer = new StringBuffer();
+    }
 
-	public void setOrder(int order) {
-		Order = order;
-	}
+    public int getX() {
+        return X;
+    }
 
-	public int getOffence() {
-		return offence;
-	}
+    public void setX(int x) {
+        X = x;
+    }
 
-	public void setOffence(int offence) {
-		this.offence = offence;
-	}
+    public int getY() {
+        return Y;
+    }
 
-	public int getDefence() {
-		return defence;
-	}
+    public void setY(int y) {
+        Y = y;
+    }
 
-	public void setDefence(int defence) {
-		this.defence = defence;
-	}
+    public int getPlayer() {
+        return Player;
+    }
 
-	public int getSum() {
-		return sum;
-	}
+    public void setPlayer(int player) {
+        Player = player;
+    }
 
-	public void setSum(int sum) {
-		this.sum = sum;
-	}
-	
+    public int getOrder() {
+        return Order;
+    }
 
-	public StringBuffer getBuffer() {
-		return buffer;
-	}
+    public void setOrder(int order) {
+        Order = order;
+    }
 
-	public void setBuffer(StringBuffer buffer) {
-		this.buffer = buffer;
-	}
+    public int getOffence() {
+        return offence;
+    }
 
-	@Override
-	public int compareTo(Chess o) {
-		if (sum > o.getSum())
-			return -1;
-		else if (sum < o.getSum())
-			return 1;
-		else
-			return 0;
-	}
-	
+    public void setOffence(int offence) {
+        this.offence = offence;
+    }
+
+    public int getDefence() {
+        return defence;
+    }
+
+    public void setDefence(int defence) {
+        this.defence = defence;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+
+
+    public StringBuffer getBuffer() {
+        return buffer;
+    }
+
+    public void setBuffer(StringBuffer buffer) {
+        this.buffer = buffer;
+    }
+
+    @Override
+    public int compareTo(Chess o) {
+		return Integer.compare(o.getSum(), sum);
+    }
 }

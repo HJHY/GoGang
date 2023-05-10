@@ -1,6 +1,6 @@
 package GobangTest;
 
-public class GobangConst {
+public class GoBangConst {
 	public static final int WINDOW_WIDTH = 1100;
 	public static final int WINDOW_HEIGHT=700;
 	public static final int GAME_WIDTH = 650;
