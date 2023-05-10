@@ -1,9 +1,9 @@
 package GobangTest;
 
-public class GobangTest {
+public class GoBang {
 	//程序入口
 	public static void main(String[] args) {
-		GobangFrame frame = new GobangFrame();
+		GoBangFrame frame = new GoBangFrame();
 		frame.start();
 	}
 }
